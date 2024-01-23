@@ -4,10 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>_Dale's First Boostrap Project</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="/css/main.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -381,10 +379,10 @@
     </section>
 
     <!-- reviews list -->
-    <section id="reviews" class="bg-light">
+    <section id="reviews" class="bg-altlight">
       <div class="container-lg">
         <div class="text-center">
-          <h2><i class="bi bi-stars"></i> Book Reviews</h2>
+          <h2><i class="bi bi-stars text-altdark"></i> Book Reviews</h2>
           <p class="lead">Comments from those who read the book...</p>
         </div>
 
@@ -394,11 +392,11 @@
               <div class="list-group-item py-3">
                 <h5 class="mb-1">A must-buy for every aspiring web dev</h5>
                 <div class="pb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
                 </div>
                 <p class="mb-1">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -658,13 +656,23 @@
       </div>
       <div class="offcanvas-body">
         <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
-        possimus nemo eos assumenda laboriosam modi autem. Praesentium odit
-        tempore maxime assumenda quia, nobis, debitis sequi cupiditate
-        voluptatum pariatur rerum modi.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+          possimus nemo eos assumenda laboriosam modi autem. Praesentium odit
+          tempore maxime assumenda quia, nobis, debitis sequi cupiditate
+          voluptatum pariatur rerum modi.
         </p>
         <div class="dropdown mt-3">
-          <button class="btn btn-secondary dropdown-toggle" type="button"></button>
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="book-dropdown"
+            data-bs-toggle="dropdown"
+          >Choose a Book Title</button>
+          <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+            <li><a href="#" class="dropdown-item">Become a React Superhero</a></li>
+            <li><a href="#" class="dropdown-item">Conquering Vue.js</a></li>
+            <li><a href="#" class="dropdown-item">Levelling up Your Next.js</a></li>
+          </ul>
         </div>
       </div>
     </div>
