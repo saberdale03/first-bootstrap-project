@@ -25,7 +25,7 @@
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light pt-4 pb-4">
-      <div class="container-xxl">
+      <div class="container-xl">
         <!-- navbar brand / title -->
         <a href="#intro" class="navbar-brand">
           <span class="fw-bold text-secondary">
@@ -85,8 +85,19 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+            <!-- open sidebar / offcanvas -->
+            <a
+              href="#sidebar"
+              class="mt-3 d-block"
+              data-bs-toggle="offcanvas"
+              role="button"
+              aria-controls="sidebar"
+            >
+              Explore my other books
+            </a>
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
+            <!-- Tooltip -->
             <span
               class="tt"
               data-bs-placement="bottom"
@@ -612,13 +623,46 @@
               quisquam numquam sunt unde? Numquam perferendis illo quia
               explicabo tempore, inventore aliquid culpa.
             </p>
-            <label for="modal-email" class="form-label">Your email address:</label>
-            <input type="text" id="modal-email" class="form-control" placeholder="e.g john.doe@example.com">
+            <label for="modal-email" class="form-label"
+              >Your email address:</label
+            >
+            <input
+              type="text"
+              id="modal-email"
+              class="form-control"
+              placeholder="e.g john.doe@example.com"
+            />
           </div>
           <div class="modal-footer text-center">
-            <button class="btn btn-primary">Submit</button>asdasdasdasda
+            <button class="btn btn-primary">Submit</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="sidebar"
+      aria-labelledby="sidebar-label"
+    >
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="sidebar-label">My Other Books</h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+        possimus nemo eos assumenda laboriosam modi autem. Praesentium odit
+        tempore maxime assumenda quia, nobis, debitis sequi cupiditate
+        voluptatum pariatur rerum modi.
+        </p>
       </div>
     </div>
 
