@@ -87,7 +87,9 @@
             <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
-            <img src="assets/ebook-cover.png" alt="Ebook" class="img-fluid" />
+            <span class="tt" data-bs-placement="bottom" title="Net Ninja Book Cover">
+              <img src="assets/ebook-cover.png" alt="Ebook" class="img-fluid" />
+            </span>
           </div>
         </div>
       </div>
@@ -478,17 +480,38 @@
           <div class="col-lg-6">
             <form>
               <label for="email" class="form-label">Email address:</label>
-              <input type="email" id="email" class="form-control" placeholder="e.g john.doe@example.com">
-
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+                <input type="email" id="email" class="form-control" placeholder="e.g john.doe@example.com">
+                <span class="input-group-text tt" data-bs-placement="right" title="Enter an email address">
+                    <i class="bi bi-question-circle"></i>
+                </span>
+              </div>
+              
               <label for="name" class="form-label">Name:</label>
-              <input type="text" id="name" class="form-control" placeholder="e.g John Doe">
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person-fill"></i>
+                </span>
+                <input type="text" id="name" class="form-control" placeholder="e.g John Doe">
+                <span class="input-group-text tt" data-bs-placement="right" title="This is really self explanatory...">
+                  <i class="bi bi-question-circle"></i>
+                </span>
+              </div>
 
               <label for="subject" class="form-label">What is your question about?</label>
-              <select id="subject" class="form-select">
-                <option value="pricing">Pricing query</option>
-                <option value="content">Content query</option>
-                <option value="other">Other query</option>
-              </select>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-chat-left-dots-fill"></i>
+                </span>
+                <select id="subject" class="form-select">
+                  <option value="pricing">Pricing query</option>
+                  <option value="content">Content query</option>
+                  <option value="other">Other query</option>
+                </select>
+              </div>
 
               <div class="form-floating mb-4 mt-4">
                 <textarea id="query" class="form-control" style="height: 140px"></textarea>
@@ -498,7 +521,6 @@
               <div class="mb-4 text-center">
                 <button type="submit" Class="btn btn-secondary">Submit</button>
               </div>
-
             </form>
           </div>
         </div>
@@ -512,5 +534,11 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltips = document.querySelectorAll(".tt")
+      tooltips.forEach(t => {
+        new bootstrap.Tooltip(t)
+      })
+    </script>
   </body>
 </html>
